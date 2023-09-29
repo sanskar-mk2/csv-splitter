@@ -3,10 +3,10 @@
 Read a csv file and split it into smaller files
 
 Store the header row(s)
-For every 1,000,000 rows
+For every 2,500 rows
   Start a new file called filename-part-x.csv
   Add the header row(s)
-  Add the 1,000,000 rows
+  Add the 2,500 rows
   Close the new file
 
 Usage:
@@ -47,5 +47,5 @@ if __name__ == '__main__':
     split_file(
         filename=arguments['<filename>'],
         header_size=int(arguments['--header_size']) if arguments['--header_size'] else 1,
-        chunk_size=int(arguments['--chunk_size']) if arguments['--chunk_size'] else 1000000
+        chunk_size=int(arguments['--chunk_size']) if arguments['--chunk_size'] else 2500
     )
